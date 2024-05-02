@@ -1,0 +1,218 @@
+/*import fonts*/
+@import url("./fonts/Roboto/Roboto-Regular.ttf");
+@import url("./variables.css");
+/* document the code*/
+/* general */
+
+body {
+  height: 100%;
+  background-color: #E1DAD4;
+
+  font-family: var(--roboto);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0b0b0b;
+  margin: 20;
+  padding: 20;
+  /* horizontal overflow hidden */
+  overflow-x: hidden;
+}
+/* apply only to home,about and plants section */
+#Home, #About{
+  padding: 20px;
+  margin: 0 50px;
+  height: 100vh;
+}
+
+
+#About {
+  margin: 50px 50px 50px 50px;
+  
+}
+
+#Plants {
+  padding: 20px;
+  margin: 50px; 
+}
+
+.navbar {
+  background-color: #273930;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-right: 20px; /* Adjust spacing between nav items */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #5f6d5c;
+}
+
+/* layout */
+.container-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto); /* Two rows, first row adjusts to content, second row auto */
+  gap: 20px; /* Gap between grid items */
+  padding: 20px;
+  margin: 0 50px;
+}
+.item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100px;
+  overflow: hidden;
+}
+.general {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 320px;
+  overflow: hidden;
+  text-align: center;
+}
+.item-video {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 320px;
+}
+
+
+.item-video img{
+  border-radius: 20px;
+  height: 280px;
+  margin-left: 60px;
+}
+
+.general img {
+  max-width: 100%;
+  height: auto;
+}
+/* layout end */
+
+/* camera feed */
+
+
+/* camera feed end */
+
+/* About section */
+#About {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the section takes up the full viewport height */
+}
+
+.centered-pair1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text1, .image1 {
+  margin: 20px; /* Adjust the spacing between elements */
+  text-align: center; /* Center align the text */
+}
+/* 
+
+.about img {
+  max-width: 100%;
+  height: auto;
+}
+ */
+
+
+ .categories-container {
+  display: flex;
+  gap: 5px; /* Adjust spacing between categories */
+  margin:40px 80px 80px 80px; /* Adjust margin */
+}
+
+.category {
+  /* margin-top: 50px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* hover effect */
+.category:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.category img {
+  width: 100%; /* Adjust image size */
+  height: auto;
+  border-radius: 5px;
+}
+
+.category-name {
+  margin-top: 10px;
+}
+
+/* CSS for the 'h2' tag inside the plants section */
+h2, h3 {
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+   /* Adjust the gap between images */
+  background-color: #273930;
+  padding: 20px;
+}
+
+footer a {
+  display: inline-block; /* Ensures images are displayed side by side */
+}
+
+footer  a img {
+  width: 30px; /* Adjust the width of the images */
+  height: auto; /* Let the height adjust proportionally */
+  margin: 0 20px; /* Adjust the gap between images */
+}
+
+/* footer end */
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.item img {
+  max-width: 100px; /* Adjust this as needed */
+  margin-right: 20px; /* Adjust spacing between image and text */
+
+}
+
+.column {
+  flex: 1;
+  align-items: center;
+}
+.item p {
+  margin: 0;
+}

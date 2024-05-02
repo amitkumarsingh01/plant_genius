@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SELF Planter</title>
+  <!-- bootstrap css file--> 
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <!-- animate on scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body>
+    <!--top navigation bar-->
+    <nav class="navbar">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#About">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Plants">Plants</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Feedback">Feedback</a>
+        </li>
+      </ul>
+    </nav>
+    <main>  
+    <!--Home content-->
+    <section id="Home">
+      <div class="container-1">
+        <!-- First Row -->
+        <div class="item">
+          <div class="column">
+            <img src="./assets/box-removebg-preview.png" alt="Water">
+          </div>
+          <div class="column">
+            <p>Soil Moisture</p>
+            <p id="water">50%</p> <!-- Placeholder for API-fetched value -->
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="column">
+            <img src="./assets/Rectangle_npk.svg" alt="N-P-K">
+          </div>
+          <div class="column">
+            <p>N-P-K</p>
+            <p id="npk">10-06-08</p> <!-- Placeholder for API-fetched value -->
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="column">
+            <img src="./assets/box_temperature.jpg" alt="Temperature">
+          </div>
+          <div class="column">
+            <p>Temperature</p>
+            <p id="temp">18°C</p> <!-- Placeholder for API-fetched value -->
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="column">
+            <img src="./assets/Rectangle 538.svg" alt="Air Quality">
+          </div>
+          <div class="column">
+            <p>CO2 Level</p>
+            <p id="aqi">400 ppm</p> <!-- Placeholder for API-fetched value -->
+          </div>
+        </div>
+
+    
+        <!-- Second Row -->
+        <div class="item-video" style="grid-column: span 3;">
+          <iframe src="http://192.168.151.243/" width="750" height="422" frameborder="0" sandbox="allow-same-origin allow-scripts"></iframe>
+        </div>
+        <div class="general">
+          <img src="rosemary.jpeg" alt="general"><h4>Selected Plant</h3>
+          <p>RoseMary</p>
+        </div>
+    </section>
+    <section id="About">
+      <div class="centered-pair1" >
+      <div class="about">
+        <div class="text1" data-aos="fade-in">
+          <h1>How The Product Works?</h1><br><br>
+          <h3>Select A Plant --> Plant the Seeds --> Let the Magic happen!!</h3>
+        </div>
+        
+        <div class="image1" data-aos="fade-left" >
+          <img src="./assets/_Tiny_Potted_Succulents_and_Gradient__Sticker_for_Sale_by_BountifulBean-removebg-preview (1).png" alt="Image1">
+        </div>
+      </div>
+    </div>
+    </section>
+    <section id="Plants">
+      <h2>Category</h2>
+      <h3>Choose from a wide range of plants</h3>
+      <div class="categories-container">
+        
+        <div class="category">
+
+            <img src="./assets/Basil_plant_1280x960_49df8295-f6fd-4d09-a968-083755711b7c_1200x-removebg-preview.png" alt="Plant 2">
+            <p class="category-name">Basil</p>
+        </div>
+        <div class="category">
+            <img src="./assets/Cilantro_Coriander_1200x960_523458e5-d922-41ea-9a89-3b14d1e01b5c_1200x-removebg-preview.png" alt="Plant 2">
+            <p class="category-name">Coriander</p>
+        </div>
+        <div class="category">
+            <img src="./assets/Lavender_plant_1200x960_f2d65d08-55d5-4196-858d-cea4a84a81da_1200x-removebg-preview.png" alt="Plant 2">
+            <p class="category-name">Lavender</p>
+        </div>
+        <div class="category">
+            <img src="./assets/Peppermint_plant_1200x960_849a45a1-0db1-4037-90f0-32f31bfd7578_1200x-removebg-preview.png">
+            <p class="category-name">Peppermint</p>
+        </div>
+        <div class="category">
+            <img src="./assets/red-hot-chili-pepper-1200x960_1200x-removebg-preview.png" alt="Plant 2">
+            <p class="category-name">Red Chilli</p>
+        </div>
+        <div class="category">
+            <img src="./assets/Thai_Basil_plant_1200x960_c1919065-ff60-4ddf-8571-95a0a8540316_1200x-removebg-preview.png" alt="Plant 2">
+            <p class="category-name">Thai Basil</p>
+        </div>
+        <!-- Add more categories as needed -->
+    </div>
+    
+    </section>
+    <footer>
+      <section id="Contact">
+        <div>
+          <a href="mailto:faizantabassum2003@gmail.com"><img src="https://brave-flower-0da55d300.3.azurestaticapps.net/envelope.218572ce.svg" alt="email" class="socialIcon">
+          </a>
+          <a href="https://github.com/faizantabassum" target="_blank" rel="noopener noreferrer"><img src="https://brave-flower-0da55d300.3.azurestaticapps.net/github.a2abf599.svg" alt="GitHub" class="socialIcon"></a>
+          <a href="https://www.linkedin.com/in/faizantabassum/" target="_blank" rel="noopener noreferrer"><img src="https://brave-flower-0da55d300.3.azurestaticapps.net/linkedin.b0d336c3.svg" alt="LinkedIn" class="socialIcon"></a>
+          <a href="https://www.youtube.com/@" target="_blank" rel="noopener noreferrer"><img src="https://brave-flower-0da55d300.3.azurestaticapps.net/youtube.225f4e4b.svg" alt="YouTube" class="socialIcon"></a>
+      </div>
+      </section>
+    </footer>
+    </main> 
+  <!-- jquery js file -->
+  <script src="./js/jquery-3.7.0.min.js"></script>
+  <!-- bootstrap js file-->
+  <script src="./js/bootstrap.min.js"></script>
+
+  <script src="./js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <!-- animate on scroll script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 3000,
+      once: true,
+    });
+  </script>
+  
+
+
+</body>
+
+</html>

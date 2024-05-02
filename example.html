@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Horizontal Scroll</title>
+    <style>
+        .container {
+            position: relative;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+        .scroll-box {
+            display: flex;
+            scroll-snap-type: x mandatory;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 10px 0;
+        }
+        .item {
+            flex-shrink: 0;
+            margin-right: 20px; /* Adjust spacing between items */
+            scroll-snap-align: start;
+        }
+        .item img {
+            max-width: 100px; /* Adjust image size */
+            height: auto;
+        }
+        .scroll-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .scroll-arrow-left {
+            left: 0;
+        }
+        .scroll-arrow-right {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll-box" id="scroll-box">
+            <!-- Repeat items here -->
+            <!-- Example item -->
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <div class="item">
+                <img src="./assets/plant1.jpg" alt="Plant 1">
+                <h3>Plant 1</h3>
+            </div>
+            <!-- End of example item -->
+        </div>
+        <div class="scroll-arrow scroll-arrow-left">&lt;</div>
+        <div class="scroll-arrow scroll-arrow-right">&gt;</div>
+    </div>
+
+    <script>
+        const scrollBox = document.getElementById('scroll-box');
+        const scrollArrows = document.querySelectorAll('.scroll-arrow');
+        const itemHtml = document.querySelector('.item').outerHTML;
+
+        scrollArrows.forEach((arrow) => {
+            arrow.addEventListener('click', () => {
+                const direction = arrow.classList.contains('scroll-arrow-left') ? -1 : 1;
+                scrollBox.scrollBy({
+                    left: direction * 200, // Adjust scroll amount as needed
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        scrollBox.addEventListener('scroll', () => {
+            if (scrollBox.scrollLeft <= 0) {
+                // If scrolled to the beginning, append items to the end
+                for (let i = 0; i < 3; i++) { // Repeat items 3 times
+                    scrollBox.innerHTML += itemHtml;
+                }
+            } else if (scrollBox.scrollLeft >= scrollBox.scrollWidth - scrollBox.clientWidth) {
+                // If scrolled to the end, prepend items to the beginning
+                for (let i = 0; i < 3; i++) { // Repeat items 3 times
+                    scrollBox.innerHTML = itemHtml + scrollBox.innerHTML;
+                }
+                // Reset scroll position to prevent jumping
+                scrollBox.scrollLeft = scrollBox.scrollWidth / 4;
+            }
+        });
+    </script>
+</body>
+</html>
